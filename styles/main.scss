@@ -1,0 +1,37 @@
+//PAGE style
+@import './index';
+@import './portfolios';
+@import './blogs';
+@import './cv';
+@import './about';
+
+@import './header';
+
+
+.absolute {
+    position: absolute;
+  }
+
+  .base-page {
+    padding: 150px 0px;
+    color: black;
+    background-color:#ecedee;
+    min-height:100vh;
+    .page-header {
+      .page-header-title {
+        font-weight: 700;
+        color: black;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  
+.pointer{
+  cursor:pointer;
+}
+
+.error{
+  font-weight:700;
+  color:red;
+}
