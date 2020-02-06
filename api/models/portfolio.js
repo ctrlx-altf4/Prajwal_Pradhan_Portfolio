@@ -16,4 +16,4 @@ const portfolioSchema = new Schema({
     endDate:Date
 })
 
-export default mongoose.model('Portfolio', portfolioSchema)
+export default mongoose.model.Potfolio || mongoose.model('Portfolio', portfolioSchema)

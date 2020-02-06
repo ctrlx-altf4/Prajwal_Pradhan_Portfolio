@@ -7,7 +7,7 @@ import {Row, Col} from 'reactstrap';
 
 const About=(props)=>{
     return(
-     <BaseLayout {...props.auth}>
+     <BaseLayout {...props.auth} title="Prajwal Pradhan- Learn More about Me">
         <BasePage className="about-page">
             <Row className="mt-5">
                 <Col md="6">

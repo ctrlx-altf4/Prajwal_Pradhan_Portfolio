@@ -6,6 +6,8 @@ import BasePage from '../components/BasePage';
 import {Row, Col, Card, CardBody, CardHeader, CardText, CardTitle} from 'reactstrap';
 import {getPortfolio,getPortfolioServer} from '../actions'
 
+
+const BASE_URL = process.env.BASE_URL;
 function renderPortfolios(portfolios){
     return portfolios.map((portfolio,index)=>{
         return(
@@ -36,14 +38,14 @@ const Portfolios=props=>{
     React.useEffect(()=>{
 
         (async function sendData(){
-            const res = await axios.get('http://localhost:3000/api/portfolioApi/nul');
+            const res = await axios.get(`${BASE_URL}/api/portfolioApi/nul`);
             setPortfolios(res.data);
             console.log(res);
         })()
         
       },[])
     return(
-        <BaseLayout {...props.auth}>
+        <BaseLayout {...props.auth} title="Prajwal Pradhan- Learn about my work and career">
             <BasePage title="Portfolio" className="portfolio-page">
                 <Row>
                     {renderPortfolios(portfolios)}

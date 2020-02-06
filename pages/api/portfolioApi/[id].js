@@ -4,7 +4,7 @@ import Portfolio from '../../../api/models/portfolio';
 import jwt from 'jsonwebtoken';
 import axios from 'axios';
 
-const namespace ='https://localhost:3000/';
+const namespace =process.env.NAMESPACE;
 
 const getJWKS=async()=>{
     const jwks =  await axios('https://ctrlx-altf4.auth0.com/.well-known/jwks.json')
@@ -58,7 +58,7 @@ const portfolioApi = async(req, res) => {
 
 
     const verifiedToken = await verifyToken(req.cookies.jwt);
-    const userRole = req.cookies.user && JSON.parse(req.cookies.user)[namespace+'role'];
+    const userRole = req.cookies.user && JSON.parse(req.cookies.user)[namespace+'/role'];
 
     const isAuthenticated =!!verifiedToken;
     const isAuthorized = checkRole(userRole, 'siteOwner');

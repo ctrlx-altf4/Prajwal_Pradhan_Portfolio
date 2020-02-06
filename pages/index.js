@@ -9,7 +9,7 @@ const Index=props=>{
   const {isAuthenticated,user}=props.auth;
   const [roles,setRoles]= useState(['Web Developer', 'React.js','Next.js','Node.js','Team Player'])
     return(
-      <BaseLayout {...props.auth} className="cover" headerType="index">
+      <BaseLayout {...props.auth} className="cover" headerType="index" title="Prajwal Pradhan- Portfolio">
         <div className="main-section">
           <div className="background-image">
             <img src="/images/background-index.png" />

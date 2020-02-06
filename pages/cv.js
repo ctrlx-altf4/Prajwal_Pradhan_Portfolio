@@ -6,7 +6,7 @@ import {Row, Col} from 'reactstrap';
 
 const CV = props =>{
     return(
-        <BaseLayout {...props.auth}>
+        <BaseLayout {...props.auth} title="Prajwal Pradhan: Get My CV">
             <BasePage className="cv-page">
                 <Row>
                     <Col md={{size:10, offset:1}}>

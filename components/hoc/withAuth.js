@@ -3,7 +3,7 @@ import BaseLayout from '../layout/BaseLayout';
 import BasePage from '../BasePage';
 
 
-const namespace = 'https://localhost:3000/';
+const namespace = process.env.NAMESPACE;
 export default function(Component,role){
     return class withAuth extends React.Component{
         
@@ -14,7 +14,7 @@ export default function(Component,role){
         }
         renderProtectedPage=()=>{
             const {isAuthenticated,user} = this.props.auth;
-            const userRole = user && user[`${namespace}role`];
+            const userRole = user && user[`${namespace}/role`];
 
             let isAuthorized=false;
 
