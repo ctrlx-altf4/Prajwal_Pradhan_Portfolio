@@ -16,7 +16,7 @@
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "auth0-js": "^9.12.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-transform-define": "^2.0.0",
     "bootstrap": "^4.4.1",
     "formik": "^2.1.2",
